@@ -146,7 +146,7 @@ class Program
         {
             Console.Clear();
             Console.WriteLine($"Name: {username,-34} Token: {gameActions.Token}");
-            Console.WriteLine($"Left: {leftKey,-12} Right: {rightKey,-12} Forward: {forwardKey,-12} Fire: {fireKey,-12} Clear Queue: {clearQueueKey,-12}");
+            Console.WriteLine($"Left: {leftKey2,-12} Right: {rightKey2,-12} Forward: {forwardKey2,-12} Fire: {fireKey,-12} Clear Queue: {clearQueueKey,-12}");
             Console.WriteLine($"Info: {infoKey,-12}  Shop: {shopKey,-12}  Repair: {repairKey,-12} Read & Empty Messages: {readAndEmptyMessagesKey,-12}");
 
             for (int i = 0; i < gameActions.Weapons.Count; i++)
