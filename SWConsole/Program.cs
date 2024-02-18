@@ -19,6 +19,8 @@ class Program
         const ConsoleKey leftKey2 = ConsoleKey.A;
 
         const ConsoleKey rightKey = ConsoleKey.RightArrow;
+        const ConsoleKey rightKey2 = ConsoleKey.D;
+
         const ConsoleKey fireKey = ConsoleKey.Spacebar;
         const ConsoleKey clearQueueKey = ConsoleKey.C;
         const ConsoleKey infoKey = ConsoleKey.I;
@@ -79,6 +81,9 @@ class Program
                     await gameActions.RotateLeftAsync(shiftPressed);
                     break;
                 case var key when key == rightKey:
+                    await gameActions.RotateRightAsync(shiftPressed);
+                    break;
+                case var key when key == rightKey2:
                     await gameActions.RotateRightAsync(shiftPressed);
                     break;
                 case var key when key == fireKey:
