@@ -16,6 +16,8 @@ class Program
         const ConsoleKey forwardKey2 = ConsoleKey.W;
 
         const ConsoleKey leftKey = ConsoleKey.LeftArrow;
+        const ConsoleKey leftKey2 = ConsoleKey.A;
+
         const ConsoleKey rightKey = ConsoleKey.RightArrow;
         const ConsoleKey fireKey = ConsoleKey.Spacebar;
         const ConsoleKey clearQueueKey = ConsoleKey.C;
@@ -64,10 +66,16 @@ class Program
 
             switch (keyInfo.Key)
             {
-                case var key when key == forwardKey || forwardKey2:
+                case var key when key == forwardKey2:
+                    await gameActions.MoveForwardAsync(shiftPressed);
+                    break;
+                case var key when key == forwardKey:
                     await gameActions.MoveForwardAsync(shiftPressed);
                     break;
                 case var key when key == leftKey:
+                    await gameActions.RotateLeftAsync(shiftPressed);
+                    break;
+                case var key when key == leftKey2:
                     await gameActions.RotateLeftAsync(shiftPressed);
                     break;
                 case var key when key == rightKey:
